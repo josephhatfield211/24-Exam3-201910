@@ -221,8 +221,7 @@ def problem5(x):
         if is_prime(x + counter):
             sum = 0
             for k in range(len(str(x+counter))):
-                what = str(x+counter)[k]
-                print(what)
+
                 sum += int(str(x+counter)[k])
             if is_prime(sum):
                 return x+counter
