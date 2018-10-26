@@ -2,9 +2,9 @@
 Final exam, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Joey Hatfield.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -213,10 +213,20 @@ def problem5(x):
       :type x:    int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    counter = 0
+    while True:
+        if is_prime(x + counter):
+            sum = 0
+            for k in range(len(str(x+counter))):
+                what = str(x+counter)[k]
+                print(what)
+                sum += int(str(x+counter)[k])
+            if is_prime(sum):
+                return x+counter
+        counter += 1
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
